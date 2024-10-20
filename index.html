@@ -33,12 +33,15 @@
           <a href ="https://github.com/Dharshini048"><i class='bx bxl-github' ></i></a>
           <a href ="https://www.linkedin.com/in/deva-dharshini-p-6333b0270?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class='bx bxl-linkedin' ></i></a>
          </div>
+         <div class="cv-cointainer">
+         <a href="path/to/Dharshini-CV.pdf"  download class="download-btn">Download CV</a>
+         </div>
         </div>
       </section>
       <section class="About" id="About">
         <div class="About-text">
           <h2>About<span>Me</span></h2>
-          <h4>Front-end Developer</h4>
+          <h4>Full Stack Developer</h4>
           <p>As an aspiring full stack developer, I am dedicated to mastering the intricate balance between front-end and back-end technologies, enabling me to create holistic web applications that deliver exceptional user experiences. With a strong foundation in front-end developmenT encompassing HTML, CSS, and JavaScript.I am adept at designing visually engaging and responsive interfaces. Simultaneously, I am advancing my skills in back-end development through hands-on experience with Node.js, Express.js, and MongoDB, allowing me to understand server-side logic and efficient data management.
              This comprehensive approach empowers me to bridge the gap between client and server, ensuring seamless functionality across applications. My commitment to continuous learning drives me to engage with the developer community, participate in collaborative projects, and explore emerging technologies, positioning me to deliver innovative and 
              intelligent solutions in an ever-evolving digital landscape.</p>
@@ -211,10 +214,10 @@
       <div class="Contact-list">
       
     <div class="Contact-form">
-      <form action="">
-        <input type="" placeholder="Enter Your Name" required>
+      <form name='submit-to-google-sheet'>
+        <input type="name" placeholder="Enter Your Name" required>
         <input type="email" placeholder="Enter Your Email" required>
-        <textarea name="" id="" cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
+        <textarea name="message" id="" cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
         <input type="submit" value="submit" class="send">
       </form>
     </div>
@@ -233,6 +236,17 @@
 
 
    </div>
-    <script src ="script.js"></script>
+    <script src ="script.js">
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbyzHlhhWzjCuRl-5HrWjeb3UM9J-tXWclh2pUvhF0y2FhmFqrf6rD8CQb_bYfiN6uN0/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+      
+    </script>
 </body>
 </html>
