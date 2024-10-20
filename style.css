@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -117,6 +118,27 @@ body{
     color: #081b29;
     box-shadow: 0 0 20px #0ef;
     margin-right: auto;
+}
+.cv-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.download-btn {
+    display: inline-block;
+    background-color:rgb(10, 142, 151);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #0866ca;
+    color: #fff;
 }
 .About{
     display:grid;
@@ -382,9 +404,9 @@ section{
     transition: background 0.5s, transform 0.5s ease;
     box-shadow:0 0 5px #fff;
 }
-.Projects-list  a:hover{
-    background-color:lightcoral;
-    transform: scale(1.05); 
+.Projects-list  div:hover{
+    background-color:#037392;
+    transform: scale(1.0); 
     text-shadow: 0 0 20px lightcoral
                  0 0 40px lightcoral;
 }
