@@ -1,16 +1,29 @@
-
+body, html {
+    overflow-x: hidden;
+  }  
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
     font-family: 'poppins',sans-serif;
     text-decoration: none;
 
 }
+section{
+    margin-bottom: 40px;
+}
 body{
     color:white;
-    background:black;
+    background:white;
+    font-size: 16px;
+}
+#head1{
+    width: 100%;
+    height: 100vh;
+    background: url(pic1.png.jpeg) ;
+    background-size:cover; 
+    background-position: center;
 }
 .header{
     position: fixed;
@@ -18,53 +31,56 @@ body{
     left: 0;
     width: 100%;
     padding: 20px;
-    background:#051129;
+    background:whitesmoke;
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
     text-decoration: none;
+
 }
 .logo{
     font-size: 25px;
-    color: #0ef;
+    color: black;
+    
     font-weight: 600;
     transition: 0.3s ease;
 }
 .logo:hover{
-    color: blueviolet;
-    text-shadow: 0 0 25px #0ef,
-                 0 0 50px #0ef;
-    transform: scale(1.2);             
+    color: rgb(45, 42, 47);
+    text-shadow: 0 0 25px #05c1f5,
+                 0 0 50px  #05c1f5;
+    transform: scale(1.1);             
 }
 .navbar a{
      display: inline-block;
     font-size:18px;
-    color: #0ef;
+    color: rgb(5, 0, 0);
     text-decoration: none;
     font-weight: 500;
     justify-content: space-between;
     margin: 0 20px;
     transition: 0.3s ease;
+    position: relative;
+    padding: 10px 10px ;
 }
-.navbar a:hover{
-    color: blueviolet;
-    text-shadow: 0 0 25px blueviolet,
-                 0 0 50px blueviolet;
-    transform: scale(1.3);  
+.navbar a:hover {
+    color:rgb(5, 0, 0); 
+    background-color: rgba(5, 193, 245, 0.7); 
+     box-shadow: 0 4px 12px rgba(5, 193, 245, 0.7); 
+    border-radius: 8px; 
 }
 .Home{
         position: relative;
         width: 100%; 
         height: 100vh; 
-        background: url(picture.png.jpeg) no-repeat left center;
-        background-size:150%; 
         display: flex;
         justify-content: flex-start;
         align-items: center; 
         padding: 70px 10%;
-    
+    margin-bottom: 40px;
+    padding-bottom: 30px;
  
 }
 .Home-content{
@@ -73,25 +89,23 @@ body{
     text-align: right;
 }
 .Home-content h3{
-    color:white;
-    font-size: 32px;
+    color:black;
+    font-size: 31px;
     font-weight: 700;
     text-align: right;
 }
 .Home-content h3 span{
-    color: #0ef;
+    color: black;
 }
 .Home-content h1{
-    color:white;
-    font-size: 56px;
+    color:#05c1f5;
+    font-size: 50px;
     font-weight: 700;
     margin:-3px 0;
     text-align: right;
-    
-
 }
 .Home-content p{
-    color:white;
+    color:black;
     font-size: 20px;
     text-align: right;
     align-items: right;
@@ -106,17 +120,18 @@ body{
     width: 40px;
     height: 40px;
     background:transparent;
-    border: 2px solid #0ef;
+    border: 2px solid black;
     border-radius: 50%;
-    color: #0ef;
+    color:#05c1f5;
     text-decoration: none;
     margin: 30px 15px 30px 0;
+    padding: 10px 20px;
 
 }
 .Home-sci a:hover{
-    background: #0ef;
+    background: #8d8b8b;
     color: #081b29;
-    box-shadow: 0 0 20px #0ef;
+    box-shadow: 0 0 10px#8d8b8b;
     margin-right: auto;
 }
 .cv-container {
@@ -126,7 +141,7 @@ body{
 
 .download-btn {
     display: inline-block;
-    background-color:rgb(10, 142, 151);
+    background-color: #05c1f5;
     color: white;
     padding: 15px 30px;
     text-decoration: none;
@@ -137,57 +152,66 @@ body{
 }
 
 .download-btn:hover {
-    background-color: #0866ca;
+    background-color:#8d8b8b;
     color: #fff;
 }
-.About{
-    display:grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items:center;
-    gap:1rem;
+.About {
+    display: flex;               
+    flex-direction: column;     
+    align-items: center;         
+    justify-content: center;     
+    height: 100vh;           
+    text-align: center;         
+     margin-top: 0;  
+     margin-bottom: 40px; 
+     padding-top:1px ;
+     
+             
 }
-.About-img img{
-    padding-top: 20%;
-    max-width: 630px;
-    height: auto;
-    width: 100%;
-    border-radius: 90
-    0px;
+
+.About h2 {
+    color: black;
+    font-size: 53px;
+    margin-top: 0;
 }
-.About h2{
-    font-size: 60px;
-    margin-top: 4rem;
+
+.About h2 span {
+    color: black;
 }
-.About h2 span{
-    color: #0ef;
-}
-.About h4{
+
+.About h4 {
     font-size: 29px;
     font-weight: 600;
-    color:#fff;
+    color:black;
     line-height: 1.7;
-    margin:15px 0 30ox;
-
+    margin: 15px 0 30px; 
 }
-.About p{
-    color:aliceblue;
+.About p {
+    color: black;
     font-size: 20px;
     line-height: 1.4;
-}
-#Experience{
-    color: aliceblue;
-    font-size: 20px;
-    line-height: 1.4;
-    margin-bottom: 4rem;
-}
-.sub-title{
+    margin: 0 auto;
     text-align: center;
-    font-size: 60px;
+    padding: 0 ;
+    max-width: 950px;
+}
+#Experience {
+    color: black;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    margin-bottom: 40px;
+    padding-top: 20px;
+}
+#Experience .container .sub-title {
+    text-align: center;
+    font-size: 53px;
     padding-bottom: 70px;
     padding-left: 80px;
 }
 .sub-title span{
-    color: #0ef;
+    color:black;
 
 }
 .container{
@@ -195,12 +219,13 @@ body{
 
 }
 .Experience-list{
+    max-width: 1200px;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     grid-gap:90px;
 margin-top: 50px;
 
-max-height: 60%;
+max-height: 50%;
 padding-left: 60px;
 }
 .Experience-list div{
@@ -224,13 +249,13 @@ padding-left: 60px;
     margin-bottom:1px;
 }
 .Experience-list div h3{
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 500;
     margin-bottom: 15px;
 }
 .Experience-list div p{
     text-decoration: none;
-    color:aliceblue;
+    color:black;
     font-size: 15px;
     margin-top:20px;
     display: inline-block;
@@ -241,12 +266,20 @@ padding-left: 60px;
 section{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    color: black;
+}
+.sub-title h1{
+    color: black;
+    font-size:5px ;
 }
 .container1{
     width: 600px;
     height: 500px;
+
     pad: 75px 90px;
     margin-left: 120px;
+    
 
 }
 .heading1{
@@ -255,6 +288,7 @@ section{
     text-underline-offset: 10px;
     text-decoration-thickness:5px ;
     margin-bottom:50px;
+    color: black;
 }
 .bar{
     font-size: 23px;
@@ -277,13 +311,13 @@ section{
     border-radius: 10px;
     width: 100%;
     height: 5px;
-    background-color: #494949;
+    background-color: #3d3c3c;
     transition: scaleX(0.1);
     transform-origin: left;
 }
 .Technical-bars .bar .progress-line span{
     height: 100%;
-    background-color: #0ef;
+    background-color: #05c1f5;
     position:absolute;
     border-radius: 10px;
 }
@@ -339,14 +373,14 @@ section{
     border-radius: 100px;
     width: 100%;
     height: 5px;
-    background-color: #494949;
+    background-color: #2d2d2d;
     transition: 0.3 ease;
     transition: scaleX(0.1);
     transform-origin: left;
 } 
 .radial-bars .bar .progress-line span {
     height: 100%;
-    background-color: #0ef;
+    background-color:#05c1f5;
     position:absolute;
     border-radius: 10px;
 }
@@ -366,19 +400,19 @@ section{
     width:80%;
 }
 #Projects{
-    color: white;
+    color: black;
     font-size: 20px;
     line-height: 1.4;
     margin-bottom: 4rem;
 }
 .sub-title{
     text-align: center;
-    font-size: 60px;
+    font-size: 53px;
     padding-bottom: 70px;
     padding-left: 200px;
 }
 .sub-title span{
-    color: #0ef;
+    color: black;
     text-align: center;
 
 }
@@ -402,26 +436,25 @@ section{
     border: 1px solid transparent; 
     border-radius: 20px;
     transition: background 0.5s, transform 0.5s ease;
-    box-shadow:0 0 5px #fff;
+    box-shadow:0 0 5px black;
 }
 .Projects-list  div:hover{
-    background-color:#037392;
+    background-color:#079ec8;
     transform: scale(1.0); 
-    text-shadow: 0 0 20px lightcoral
-                 0 0 40px lightcoral;
 }
 .Projects-list div i{
     font-size: 30px;
 }
 .Projects-list div h2{
-    color: white;
+    color: black;
 }
 .Projects-list div h3{
-    color: white;
+    color: black;
 }
 .Projects-list div p{
     padding-top: 10px;
-    color: white;
+    color: black;
+
 }
 
 .Contact{
@@ -433,14 +466,15 @@ section{
     margin-top: 30px;
 }
 .Contact-text h2{
-    font-size: 60px;
+    font-size: 53px;
     line-height: 1;
     text-align: left;
     padding-left: 0px;
+    color: black;
 
 }
 .Contact-text h2 span{
-    color:#0ef;
+    color:black;
 }
 .Contact-list{
     margin-bottom: 1rem;
@@ -448,7 +482,7 @@ section{
 
 .Contact-list i{
     display: inline-block;
-    color:#0ef;
+    color:black;
     font-size: 20px;
     font-weight: 600;
     transition: all .40s ease;
@@ -460,19 +494,19 @@ section{
     width: 40px;
     height: 40px;
     background: transparent;
-    border: 2px solid #0ef;
+    border: 2px solid black;
     border-radius: 50%;
     font-size: 30px;
-    color: #0ef;
+    color:#079ec8;
     text-decoration: none;
     margin: 30px 15px 30px 0;
     transition: .5s ease;
 
 }
 .Contact-icons i:hover{
-    background-color: #0ef;
+    background-color: #8d8b8b;
     color:#000;
-    box-shadow: 0 0 20px #0ef;
+    box-shadow: 0 0 20px #8d8b8b;
 
 }
 .Contact-icons h2{
@@ -488,10 +522,10 @@ section{
 .Contact-form form input,form textarea{
     border: none;
     outline:none;
-    width: 150%;
+    width: 100%;
     padding: 18px;
-    background: rgba(238, 233, 233, 0.838);
-    color: #000;
+    background: rgba(70, 68, 68, 0.838);
+    color: rgb(248, 244, 244);
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
@@ -502,14 +536,145 @@ section{
     resize: none;
     height: 220px;
 }
-.Contact-form form .send{
+.btn.btn2{
     display: inline-block;
-    padding:  14px 60px;
-    background: #0ef;
+    background:#05c1f5;
+}
+.Contact-form form .btn2{
+    padding: 14px 60px;
     font-size: 18px;
-    border-radius: 40px;
-    color: #081b29;
-    letter-spacing: 1px;
-    text-decoration: none;
-    font-weight: 600;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+@media only screen and (max-width: 600px) {
+    .header {
+        flex-direction: column; 
+        text-align: center; 
+        padding: 15px; 
+    }
+
+    .navbar {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 10px; 
+    }
+
+    .navbar a {
+        font-size: 16px; 
+        padding: 8px 0;
+        text-align: center; 
+    }
+
+        .Home-content {
+            background-image: url(pic2.png.jpeg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20%; 
+            margin-bottom: 50px;
+           
+        }
+        .Home-content p{
+            text-align: center;
+            margin: 0 auto;
+            width: 90%;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+    
+        .Home-content h1 {
+            font-size: 35px; 
+        }
+    
+        .Home-content h3 {
+            font-size: 20px;
+        }
+        .Home-sci {
+            gap: 12px; 
+            margin-top: 15px;
+        }
+    
+        .Home-sci a {
+            font-size: 22px; 
+        }
+    
+      
+        .download-btn {
+            margin-top: 15px;
+            font-size: 14px; 
+        }
+        .About {
+            padding-top: 10px; 
+            text-align: center;
+        }
+        .About p{
+            width: 90%;
+        
+        }
+        .Experience-list {
+            grid-template-columns: 1fr; 
+        }
+    
+        .Experience-list div {
+            padding: 10px; 
+        }
+        .sub-title{
+            text-align: left;
+        }
+        .Projects-list {
+            grid-template-columns: 1fr; 
+        }
+   .Contact-form input,
+        .Contact-form textarea {
+            width: 100%; 
+            margin-bottom: 15px; 
+        }
+    
+        .Contact-form button {
+            width: 100%; 
+        } 
+        .Contact-icons a {
+            font-size: 26px; 
+        }
+        .About, .Projects-list, .Experience-list {
+            padding: 0 15px; 
+            margin: 0;
+          }
+        
+          .About p, .Experience-list div, .Projects-list div {
+            text-align: center; 
+            font-size: 14px; 
+            width: 100%;
+            max-width: 100%; 
+            margin: 0 auto; 
+          }
+          .Technical-bars, .radial-bars {
+            width: 100%; 
+            padding: 20px 5%; 
+            margin: 0 auto; 
+        }
+        .container1, .container2 {
+            width: 100%;
+            padding: 0 10px;
+            margin: 0 auto; 
+        }
+        .Technical-bars .sub-title, 
+        .radial-bars .sub-title, 
+        #Projects .sub-title {
+            text-align: center;
+            padding-left: 0; 
+            margin: 0 auto; 
+            width: 100%; 
+        }
+        .Technical-bars .sub-title h2, 
+        .radial-bars .sub-title h2, 
+        #Projects .sub-title h2 {
+            font-size: 24px; 
+        }
+         .sub-title span {
+            display: inline-block; 
+            text-align: center; 
+        }
+    
 }
